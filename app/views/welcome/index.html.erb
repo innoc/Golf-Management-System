@@ -1,0 +1,32 @@
+<div class="main-container">
+
+  <% if !flash.empty? %><div class="error_container"><%= flash[:notice] %> </div><% end %> 
+  <h1>Welcome to the GTA Golf Club management system</h1>
+  <div class="main-container__index-menu">
+
+    <div class="main-container__index-menu--signin">
+      Already a member?
+    </div>
+
+    <div class="main-container__index-menu--register">
+      Become a member
+    </div>
+
+    <div id="hidden__field--register">
+      <%=form_for(:user, :url => register_path) do |f|%>
+        Register a unique username
+        <p><%=f.text_field(:username,:class=>"index_field")%></p>        
+        <%=submit_tag "Register",:class => 'submit_class'%>
+      <%end%>
+    </div>
+
+    <div id="hidden__field--signin">
+      <%=form_tag session_path do %>
+        Sign-in with a registered username
+        <p><%=text_field_tag(:username,nil,:class=>"index_field")%></p>    
+        <%=submit_tag "Sign-in",:class => 'submit_class'%>
+      <%end%>
+    </div>
+
+  </div>
+</div>

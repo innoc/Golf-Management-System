@@ -1,0 +1,10 @@
+<%time_slot_id = user_booking_restriction(time_slot,current_user,golf_club)%>
+<%if time_slot_id == "yes"%>
+  <%=link_to "Book time", book_time_slot_path(:time_value=>time_slot,:golf_club_id=>golf_club.id),:method=>"post"%>
+<%else%>
+  <%if time_slot_id == "booked"%>
+    Booked
+  <%else%>
+    <%=link_to "Cancel", cancel_time_slot_path(:time_slot_id=>time_slot_id),:method=>"post"%>
+  <%end%>
+<%end%>

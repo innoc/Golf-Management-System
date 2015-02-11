@@ -1,0 +1,27 @@
+// Place all the styles related to the boooking controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.club-entry{ 
+  text-align: left;
+}
+
+.time-slots {
+  font-size: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightblue;
+}
+
+.time-slots__menu {
+  float: right;
+}
+
+.time-slots__menu a{ 
+  color:#2b6cc2;  
+  text-decoration:none;
+}
+
+.time-slots__menu a:hover{ 
+  text-decoration:underline;
+}

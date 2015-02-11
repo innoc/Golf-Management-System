@@ -1,0 +1,73 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-container {
+  border: 1px solid lightblue;
+  margin: 80px auto;
+  width: 50%;
+  padding: 5px;
+  text-align:center;
+
+  h1{ 
+    font-size:20px;
+  }
+}
+
+.main-container__index-menu {
+  margin: 10% auto;
+  width: 60%;
+  padding: 5px;
+  height: 229px;
+}
+
+.main-container__index-menu--signin {
+  float: left;
+  border: 1px solid lightblue;
+  padding: 28px;
+  background-color: rgb(100,100,115);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-container__index-menu--register{
+  float: right;
+  border: 1px solid lightblue;
+  padding: 28px;
+  background-color: lightblue;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#hidden__field--signin {
+  text-align: center;
+  margin-top: 100px;
+  color:rgb(170,170,170);
+  display:none;
+}
+
+.submit_class{ 
+  border: 1px solid lightblue;
+  padding: 5px;
+  background: white;
+  font-size: smaller;
+  background: #eeeeee;
+} 
+
+#hidden__field--register{
+  text-align: center;
+  color:rgb(170,170,170);
+  margin-top: 100px;
+  display:none;
+}
+
+.index_field {
+  width: 393px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid lightblue;
+  font-size: 36px;
+}
+

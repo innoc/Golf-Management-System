@@ -1,0 +1,17 @@
+<div class="main-container"> 
+<% if !flash.empty? %><div class="error_container"><%= flash[:notice] %> </div><% end %> 
+  <h1>Golf Club List</h1>
+  <%for golf_club in @clubs %>
+    <div class="club-entry">
+      <h3><%=golf_club.name%><h3>
+      <%for time_slot in create_time_slots(20)%>
+        <div class="time-slots">
+          <%=time_slot%>
+          <div class="time-slots__menu">
+            <%=render :partial=>"book_time_slot", :locals => {:time_slot => time_slot,:golf_club => golf_club}%>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  <%end%>
+</div>
